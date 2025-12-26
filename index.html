@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAN_CN</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="konteiner-shapki">
+        <div class="temnaya-liniya"></div>
+        <nav class="main-nav" role="navigation" aria-label="Головне меню">
+            <ul>
+                <li><a href="#" class="nav-item">Послуги</a></li>
+                <li><a href="#" class="nav-item">Ціни</a></li>
+                <li><a href="#" class="nav-item">Ремонт</a></li>
+                <li><a href="#" class="nav-item">Фото</a></li>
+                <li><a href="#" class="nav-item">Контакти</a></li>
+                <li><a href="#" class="nav-item">Новини</a></li>
+            </ul>
+        </nav>
+        <img src="images/logo.png" alt="Логотип" class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Логотип" class="logo">
+        </a>
+        <h1 class="site-title">Сантехніка Інженерні роботи Чернігів.</h1>
+        <button class="order-button" id="orderButton">Замовити дзвінок/виїзд майстера</button>
+        
+        <!-- Выпадающая форма заказа -->
+        <div class="order-form-container" id="orderForm">
+            <form class="order-form" id="mainOrderForm" action="https://formspree.io/f/xldqpvpr" method="POST">
+                <h3>Замовлення виїзду майстра</h3>
+                <input type="hidden" name="_subject" value="Нове замовлення виїзду майстра">
+                
+                <label>
+                    Що потрібно зробити?
+                    <input type="text" name="task" placeholder="Опишіть завдання" required>
+                </label>
+                
+                <label>
+                    Терміновість:
+                    <select name="urgency" required>
+                        <option value="" disabled selected>Оберіть терміновість</option>
+                        <option value="Терміново">Терміново</option>
+                        <option value="Сьогодні">Сьогодні</option>
+                        <option value="Коли зручно">Коли зручно</option>
+                    </select>
+                </label>
+                
+                <label>
+                    Адреса:
+                    <input type="text" name="address" placeholder="Введіть адресу" required>
+                </label>
+                
+                <label>
+                    Телефон:
+                    <input type="tel" name="phone" placeholder="+380XXXXXXXXX" required>
+                </label>
+                
+                <label>
+                    Додаткова інформація (необов'язково):
+                    <textarea name="additional_info" placeholder="Додайте коментарі або посилання на фото" rows="3"></textarea>
+                </label>
+                
+                <!-- Выбор способа отправки -->
+                <p class="send-method-title">Оберіть зручний спосіб відправки заявки:</p>
+                
+                <div class="send-buttons-container">
+                    <button type="button" class="send-button send-telegram" id="sendTelegram">
+                        <span class="button-icon">📱</span>
+                        Telegram
+                    </button>
+                    
+                    <button type="button" class="send-button send-viber" id="sendViber">
+                        <span class="button-icon">💜</span>
+                        Viber
+                    </button>
+                    
+                    <button type="submit" class="send-button send-email" id="sendEmail">
+                        <span class="button-icon">✉️</span>
+                        Email
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <a href="index-ru.html" class="language-switcher">ru</a>
+    </div>
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">
+                <span class="hero-line">San_cn</span>
+                <span class="hero-line">надійний партнер</span>
+                <span class="hero-line">у світі сантехніки</span>
+            </h2>
+        </div>
+        <img src="images/partner.png" alt="San_cn - надійний партнер" class="hero-image">
+    </section>
+
+    <!-- Второй блок (такой же высоты как hero) -->
+    <section class="second-block">
+        <div class="second-block-inner">
+            <div class="second-block-left">
+                <!-- Слайдер изображений -->
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <img src="images/slide1.jpg" alt="Слайд 1" class="slider-image active">
+                        <img src="images/slide2.jpg" alt="Слайд 2" class="slider-image">
+                        <img src="images/slide3.jpg" alt="Слайд 3" class="slider-image">
+                        <img src="images/slide4.jpg" alt="Слайд 4" class="slider-image">
+                        <img src="images/slide5.jpg" alt="Слайд 5" class="slider-image">
+                        <img src="images/slide6.jpg" alt="Слайд 6" class="slider-image">
+                    </div>
+                </div>
+            </div>
+            <div class="second-block-divider"></div>
+            <div class="second-block-right">
+                <div class="about-container">
+                    <h2 class="about-title">Про компанію</h2>
+                    <div class="about-content">
+                        <p class="about-item"><strong>Досвід:</strong> Більше 15 років на ринку сантехнічних послуг</p>
+                        <p class="about-item"><strong>Проєкти:</strong> Понад 500+ успішно виконаних замовлень</p>
+                        <p class="about-item"><strong>Досягнення:</strong> Якісний монтаж, гарантія на всі роботи, довіра клієнтів</p>
+                        <p class="about-item"><strong>Місія:</strong> Забезпечити надійні та професійні сантехнічні рішення для кожного дому</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Третій блок з фоновим зображенням -->
+    <section class="third-block">
+        <img src="images/choice.png" alt="Вибір якісної сантехніки" class="third-block-image">
+        <!-- Полупрозрачный контент-блок поверх изображения -->
+        <div class="third-block-overlay">
+            <h2 class="posluhy-zaholovok">Вирішуємо завдання будь-якої складності</h2>
+            <p class="posluhy-pidzaholovok">Від термінового ремонту до комплексних інженерних рішень</p>
+            
+            <ul class="posluhy-spysok">
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Зношені труби та стояки</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Відсутність гарячої води</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Старі або неправильно встановлені сантехніка та арматура</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Розведення труб у новобудові</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Опалення неефективне опалення з нуля</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Каналізація септик підключення</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Відсутність вентиляції</a>
+                </li>
+                <li class="posluha-punkt">
+                    <a href="#" class="posluha-posilannia">Необхідність електромонтажу на об'єкті</a>
+                </li>
+            </ul><!-- Здесь будет размещаться контент: текст, кнопки и т.п. -->
+        </div>
+    </section>
+
+    <!-- Секция проблем -->
+    <section class="problems-section">
+        <!-- Контент будет добавлен позже -->
+    </section>
+    
+    <div class="content-wrapper">
+        <div class="content-wrapper-inner">
+            <!-- Сюда добавляется весь остальной контент -->
+        </div>
+    </div>
+
+</body>
+
+</html>
